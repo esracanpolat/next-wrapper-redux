@@ -1,0 +1,13 @@
+.footer {
+    line-height: 1.5;
+    font-size: 1.5rem;
+    position: absolute;
+    background-color: black;
+    margin-bottom:0;
+    height: 20vh;
+    right: 0;
+    left:0;
+    padding-left:80 ;
+    padding-right:80 ;
+
+  }
