@@ -81,12 +81,12 @@ const index = () => {
                         <div>
                             <p className={styles.subStepTitle}>Hangi Ülkede Yaşıyorsun?</p>
                             <div>
-                                <select name="cars" onChange={handleChange}
+                                <select name="country" onChange={handleChange}
                                     values={values.email} id="cars">
-                                    <option value="volvo">Volvo</option>
-                                    <option value="saab">Saab</option>
-                                    <option value="mercedes">Mercedes</option>
-                                    <option value="audi">Audi</option>
+                                    <option value="turkey">Türkiye</option>
+                                    <option value="usa">USA</option>
+                                    <option value="germany">Germany</option>
+                                    <option value="Algeria">algeria</option>
                                 </select>
                                 {errors.email ? errors.email : null}
                             </div>

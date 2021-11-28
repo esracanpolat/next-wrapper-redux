@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link'
+import { useRouter } from 'next/dist/client/router';
 
 const Header = (mobileScreen) => {
     const [show, setShow] = useState(false);
@@ -10,7 +11,8 @@ const Header = (mobileScreen) => {
             setMenu(false)
         }
     }
-    console.log(menu);
+    const router = useRouter();
+
     return (<>
         <div class="justify-between flex items-center p-5 px-24" style={{ height: "15vh" }} >
             <div className="pl-4 flex   justify-center">
@@ -49,7 +51,7 @@ const Header = (mobileScreen) => {
                     <p style={{ color: "white", padding: 10 }}>Yolcuğum</p>
                     <p style={{ color: "white", padding: 10 }}>Seminerlerim</p>
                     <p style={{ color: "white", padding: 10 }}>Yolculuklarımız</p>
-                    <p style={{ color: "white", padding: 10 }}>FOTOGRAFLAR</p>
+                    <a style={{ color: "white", padding: 10 }} onClick={() => router.push("/Photos")}>FOTOGRAFLAR</a>
                     <hr />
                     <p style={{ color: "white", padding: 20 }}>ÇALIŞMALARIMIZ</p>
                     <hr />
