@@ -11,9 +11,36 @@
   justify-content: center;
   align-items: center;
 }
+.header{
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 61px;
+}
+.content{
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+}
+.name{
+  font-family: Inter;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 22px;
+}
 .input{
   border: 1px solid #000000;
-  padding: 14px;
+  padding: 8px;
+  width: 100%;
+}
+.select{
+  border: 1px solid #000000;
+  padding: 8px;
+  width: 100%;
 }
 .inputTextArea{
   border: 1px solid #000000;

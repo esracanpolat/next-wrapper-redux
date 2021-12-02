@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 
 export default function Home({ Component, pageProps }) {
   return (
-    <div className="md:flex lg:flex sm:block" style={{ height: "80%" }}>
+    <div className="md:flex lg:flex sm:flex" style={{ height: "80%" }}>
       <div style={{ width: "20%", display: 'flex', justifyContent: "center", alignItems: "center" }} >
         <div className="md:block  sm:inline ">
           <img style={{ marginTop: 20 }} src="./img/Facebook - Negative.svg" />
@@ -18,17 +18,15 @@ export default function Home({ Component, pageProps }) {
           <img style={{ height: "100%", minWidth: "300px", borderRadius: 10 }} src="./img/Ferhan.png" />
         </div>
         <div className="row-span-2 sm:row-start-2 md:row-start-2" style={{ padding: 100 }}>
-          <p>Merhaba, Dünyama Hoş Geldin</p>
-          <p >Sporu çok seviyorum ve bir Triathletim! İnsanların da daha sağlıklı ve aktif bir yaşam biçimi benimsemeleri için elimden gelen her şeyi yapmaya hazırım.
-
-            Sağlıklı ve daha iyi bir dünya için benim seçtiğim yol bu! Mutlu, huzurlu ve kendini seven bireyler dünyayı daha güzel bir yere çevirir. En büyük motivasyonum da bu amaç doğrultusunda sizinle birlikte hareket edebilmek. Web sitemi gezerken umarım istediklerini karşılarım!
-
-            Benimle gel ve motive ol!</p>
+          <p className={styles.header}>Merhaba, Dünyama Hoş Geldin</p>
+          <p className={styles.content}>Herkese Selam</p>
+          <p className={styles.name}>Ben Ferhan Cihaner,</p>
+          <p className={styles.content} >Sporu çok seviyorum ve bir Triathletim! İnsanların da daha sağlıklı ve aktif bir yaşam biçimi benimsemeleri için elimden gelen her şeyi yapmaya hazırım. Sağlıklı ve daha iyi bir dünya için benim seçtiğim yol bu! Mutlu, huzurlu ve kendini seven bireyler dünyayı daha güzel bir yere çevirir. En büyük motivasyonum da bu amaç doğrultusunda sizinle birlikte hareket edebilmek. Web sitemi gezerken umarım istediklerini karşılarım! Benimle gel ve motive ol! </p>
         </div>
       </div>
-      {/* <div style={{ position: "absolute", right: 50, bottom: 30 }}>
+      <div style={{ position: "absolute", right: 50, bottom: 30 }}>
         <p>copyright © ferhancihaner.com</p>
-      </div> */}
+      </div>
     </div>
   )
 }

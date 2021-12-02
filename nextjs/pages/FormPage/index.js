@@ -37,58 +37,54 @@ const index = () => {
                                 <input
                                     type="text"
                                     name="firstName"
-                                    placeholder="Ad"
+                                    placeholder="isim"
                                     className={styles.input}
                                     onChange={handleChange}
                                     values={values.firstName}
                                 />
-                                {errors.firstName ? errors.firstName : null}
                             </div>
                             <div>
                                 <input
                                     type="text"
                                     name="lastName"
-                                    placeholder="Soyad"
+                                    placeholder="telefon"
                                     className={styles.input}
                                     onChange={handleChange}
                                     values={values.lastName}
                                 />
-                                {errors.lastName ? errors.lastName : null}
                             </div>
                             <div>
                                 <input
                                     type="text"
                                     name="email"
-                                    placeholder="Email"
+                                    placeholder="E-posta"
                                     className={styles.input}
                                     onChange={handleChange}
                                     values={values.email}
                                 />
-                                {errors.email ? errors.email : null}
                             </div>
                             <div>
                                 <input
                                     type="text"
-                                    name="email"
-                                    placeholder="E-mail"
+                                    name="phone"
+                                    placeholder="İnstagram"
                                     className={styles.input}
                                     onChange={handleChange}
                                     values={values.email}
                                 />
-                                {errors.email ? errors.email : null}
                             </div>
                         </div>
                         <div>
                             <p className={styles.subStepTitle}>Hangi Ülkede Yaşıyorsun?</p>
                             <div>
-                                <select name="country" onChange={handleChange}
-                                    values={values.email} id="cars">
+                                <select name="country" onChange={handleChange} className={styles.input}
+                                    className={styles.select}
+                                    values={values.country}>
                                     <option value="turkey">Türkiye</option>
                                     <option value="usa">USA</option>
                                     <option value="germany">Germany</option>
                                     <option value="Algeria">algeria</option>
                                 </select>
-                                {errors.email ? errors.email : null}
                             </div>
                         </div>
                         <div>
@@ -102,35 +98,54 @@ const index = () => {
                                     onChange={handleChange}
                                     values={values.email}
                                 />
-                                {errors.email ? errors.email : null}
                             </div>
                         </div>
                         <div>
                             <p className={styles.subStepTitle}>  Harbilife ürünü kullandınız mı?</p>
                             <div>
-                                <input
-                                    type="text"
-                                    name="email"
-                                    placeholder="E-mail"
-                                    className={styles.input}
-                                    onChange={handleChange}
-                                    values={values.email}
-                                />
-                                {errors.email ? errors.email : null}
+                                <label>
+                                    <input type="radio" name="email" class="radio" value="1" onChange={handleChange}
+                                        className={styles.input} values={values.radio} />Evet</label>
+                                <label>
+                                    <input type="radio" name="email" class="radio" value="0" onChange={handleChange}
+                                        className={styles.input} values={values.radio} />Hayır</label>
                             </div>
                         </div>
                         <div>
                             <p className={styles.subStepTitle}> Harbilife ürünü kullandınız mı?</p>
                             <div>
                                 <label>
-                                    <input type="checkbox" name="email" class="form-radio" value="1" name="fooby[1][]" onChange={handleChange}
-                                        values={values.email} />Kiwi</label>
+                                    <input type="radio" name="email" class="form-radio" value="1" name="fooby[1][]" onChange={handleChange}
+                                        className={styles.input} values={values.radioCheck} />Evet</label>
                                 <label>
-                                    <input type="checkbox" name="email" class="form-radio" value="1" name="fooby[1][]" onChange={handleChange}
-                                        values={values.email} />Jackfruit</label>
-
-                                {errors.email ? errors.email : null}
+                                    <input type="radio" name="email" class="form-radio" value="0" name="fooby[1][]" onChange={handleChange}
+                                        className={styles.input} values={values.radioCheck} />Hayır</label>
                             </div>
+                        </div>
+                        <div>
+                            <p className={styles.subStepTitle}> İdeal vücut ölçün nedir?</p>
+                            <div>
+                                <input
+                                    type="text"
+                                    name="email"
+                                    placeholder="E-mail"
+                                    className={styles.input}
+                                    onChange={handleChange}
+                                    values={values.email}
+                                />
+                            </div>
+                        </div>
+                        <div>
+                            <p className={styles.subStepTitle}>Bize biraz kendinden bahsedebilirmisin?</p>
+                            <textarea
+                                type="textarea"
+                                name="about"
+                                placeholder="Kendinizden bahsedermisiniz..."
+                                className={styles.inputTextArea}
+                                onChange={handleChange}
+                                values={values.firstName}
+                            />
+                            {errors.firstName ? errors.firstName : null}
                         </div>
                         <div style={{ marginBottom: 100 }}>
                             <button className={styles.submitButton} type="submit">Gönder</button>
