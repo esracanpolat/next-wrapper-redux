@@ -49,26 +49,29 @@ const Header = (mobileScreen) => {
                 <div>
                     <a onClick={() => openMenu()}><BiX style={{ color: "white", fontSize: 40 }} /></a>
                 </div>
-                <div className="sm:pl-24 sm:pt-18 md:pt-32 md:pl-32 lg:pt-32 lg:pl-32">
+                <div className="sm:pl-24 sm:pt-18 md:pt-32 md:pl-32 lg:pt-32 lg:pl-32" style={{ paddingLeft: 80, paddingTop: 80 }}>
                     <hr />
-                    <p style={{ color: "white", padding: 20 }} onClick={() => setOpenMobile(!openMobile)}>HAKKIMIZDA</p>
+                    <p style={{ color: "white", padding: 10 }} onClick={() => setOpenMobile(!openMobile)}>HAKKIMIZDA</p>
                     <hr />
                     <div className={openMobile === true ? "block" : "hidden"}>
                         <p style={{ color: "white", padding: 10 }}>Yolcuğum</p>
                         <p style={{ color: "white", padding: 10 }}>Seminerlerim</p>
                         <p style={{ color: "white", padding: 10 }}>Yolculuklarımız</p>
                     </div>
-                    <a style={{ color: "white", padding: 10 }} onClick={() => router.push("/Photos")}>FOTOGRAFLAR</a>
+                    <p style={{ color: "white", padding: 10 }}><a onClick={() => router.push("/Photos")}>FOTOGRAFLAR</a></p>
                     <hr />
-                    <p style={{ color: "white", padding: 20 }}>ÇALIŞMALARIMIZ</p>
+                    <p style={{ color: "white", padding: 10 }}>ÇALIŞMALARIMIZ</p>
                     <hr />
-                    <p style={{ color: "white", padding: 20 }}>YOLCULUĞA BAŞLA</p>
+                    <p style={{ color: "white", padding: 10 }}>YOLCULUĞA BAŞLA</p>
                     <hr />
-                    <p style={{ color: "white", padding: 20 }}>İLETİŞİM</p>
+                    <p style={{ color: "white", padding: 10 }}>İLETİŞİM</p>
                     <hr />
-                </div>
-                <div>
-
+                    <div className="inline-flex justify-content-center">
+                        <img style={{ marginTop: 20, color: "white", marginLeft: 20 }} src="./img/Facebook(1).svg" />
+                        <img style={{ marginTop: 20, color: "white", marginLeft: 20 }} src="./img/Facebook(2).svg" />
+                        <img style={{ marginTop: 20, color: "white", marginLeft: 20 }} src="./img/Facebook(3).svg" />
+                        <img style={{ marginTop: 20, color: "white", marginLeft: 20 }} src="./img/Facebook(4).svg" />
+                    </div>
                 </div>
             </div>}</>
     );

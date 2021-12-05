@@ -16,6 +16,7 @@ const Layout = ({ children }) => {
     useEffect(() => {
         window.addEventListener("resize", handleResize)
     }, []);
+    console.log(children);
     return (<>
         <div className={styles.container}>
             <Header mobileScreen={mobileScreen} />
