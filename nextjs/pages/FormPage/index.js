@@ -7,21 +7,28 @@ import { useRouter } from 'next/dist/client/router';
 
 const index = () => {
     const dispatch = useDispatch();
+    const { InsertData } = useSelector(state => state);
+
     const router = useRouter();
     const { handleSubmit, handleChange, values, errors } = useFormik({
         initialValues: {
             firstName: '',
             lastName: '',
             email: '',
+            phone: '',
+            instgram: '',
+            country: '',
+            radio: '',
+            radioCheck: '',
+            measure: '',
+            about: ''
         },
         onSubmit: values => {
             console.log(values);
             dispatch(saveData(values));
-            router.push("/FormPageStepTwo")
         }
     });
-    const { InsertData } = useSelector(state => state);
-    console.log(InsertData, "data");
+    console.log(InsertData);
     return (
         <div className="grid-rows-none">
             <div className="bg-black h-16 flex justify-center items-center">
@@ -46,11 +53,11 @@ const index = () => {
                             <div>
                                 <input
                                     type="text"
-                                    name="lastName"
+                                    name="phone"
                                     placeholder="telefon"
                                     className={styles.input}
                                     onChange={handleChange}
-                                    values={values.lastName}
+                                    values={values.phone}
                                 />
                             </div>
                             <div>
@@ -66,11 +73,11 @@ const index = () => {
                             <div>
                                 <input
                                     type="text"
-                                    name="phone"
+                                    name="instgram"
                                     placeholder="İnstagram"
                                     className={styles.input}
                                     onChange={handleChange}
-                                    values={values.email}
+                                    values={values.instgram}
                                 />
                             </div>
                         </div>
@@ -89,25 +96,12 @@ const index = () => {
                         </div>
                         <div>
                             <p className={styles.subStepTitle}>  Harbilife ürünü kullandınız mı?</p>
-                            <div>
-                                <input
-                                    type="text"
-                                    name="email"
-                                    className={styles.input}
-                                    placeholder="E-mail"
-                                    onChange={handleChange}
-                                    values={values.email}
-                                />
-                            </div>
-                        </div>
-                        <div>
-                            <p className={styles.subStepTitle}>  Harbilife ürünü kullandınız mı?</p>
-                            <div>
+                            <div >
                                 <label>
-                                    <input type="radio" name="email" class="radio" value="1" onChange={handleChange}
+                                    <input type="radio" name="email" className="radio" value="true" onChange={handleChange}
                                         className={styles.input} values={values.radio} />Evet</label>
                                 <label>
-                                    <input type="radio" name="email" class="radio" value="0" onChange={handleChange}
+                                    <input type="radio" name="email" className="radio" value="false" onChange={handleChange}
                                         className={styles.input} values={values.radio} />Hayır</label>
                             </div>
                         </div>
@@ -115,10 +109,10 @@ const index = () => {
                             <p className={styles.subStepTitle}> Harbilife ürünü kullandınız mı?</p>
                             <div>
                                 <label>
-                                    <input type="radio" name="email" class="form-radio" value="1" name="fooby[1][]" onChange={handleChange}
+                                    <input type="radio" name="email" className="form-radio" value="true" name="radioCheck" onChange={handleChange}
                                         className={styles.input} values={values.radioCheck} />Evet</label>
                                 <label>
-                                    <input type="radio" name="email" class="form-radio" value="0" name="fooby[1][]" onChange={handleChange}
+                                    <input type="radio" name="email" className="form-radio" value="false" name="radioCheck" onChange={handleChange}
                                         className={styles.input} values={values.radioCheck} />Hayır</label>
                             </div>
                         </div>
@@ -127,11 +121,11 @@ const index = () => {
                             <div>
                                 <input
                                     type="text"
-                                    name="email"
-                                    placeholder="E-mail"
+                                    name="measure"
+                                    placeholder="ideal vücut ölçünüzü yazınız..."
                                     className={styles.input}
                                     onChange={handleChange}
-                                    values={values.email}
+                                    values={values.measure}
                                 />
                             </div>
                         </div>
@@ -143,9 +137,8 @@ const index = () => {
                                 placeholder="Kendinizden bahsedermisiniz..."
                                 className={styles.inputTextArea}
                                 onChange={handleChange}
-                                values={values.firstName}
+                                values={values.about}
                             />
-                            {errors.firstName ? errors.firstName : null}
                         </div>
                         <div style={{ marginBottom: 100 }}>
                             <button className={styles.submitButton} type="submit">Gönder</button>
