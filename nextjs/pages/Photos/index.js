@@ -20,7 +20,7 @@ const index = () => {
             </div>
             <div className="flex justify-center items-center">
                 <div className="grid grid-rows-3 grid-flow-col gap-4" style={{ margin: 50 }}>
-                    {JSON.parse(allList) && JSON.parse(allList).map((x) => (<a onClick={() => showDetail(x)}><img src={x.thumbnailUrl} style={{ height: "auto", width: "auto", marginLeft: 10 }} /></a>))}
+                    {JSON.parse(allList) && JSON.parse(allList).map((x) => (<a onClick={() => showDetail(x)}><img src={x.thumbnailUrl} style={{ height: 200, width: 200, marginLeft: 10 }} /></a>))}
                 </div>
             </div>
         </div>
