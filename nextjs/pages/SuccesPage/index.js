@@ -6,7 +6,7 @@ const index = () => {
             <div className="bg-black h-16 flex justify-center items-center">
                 <p style={{ color: "white", fontSize: 40, fontFamily: "inherit" }}>Yolculuğa Başla</p>
             </div>
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center" style={{ height: "80vh" }}>
                 <div>
                     Tamamlandı...
                 </div>

@@ -26,8 +26,15 @@ const index = () => {
         onSubmit: values => {
             console.log(values);
             dispatch(saveData(values));
+            formResult();
         }
     });
+    function formResult() {
+        if (InsertData) {
+            router.push("/SuccesPage")
+
+        }
+    }
     console.log(InsertData);
     return (
         <div className="grid-rows-none">
